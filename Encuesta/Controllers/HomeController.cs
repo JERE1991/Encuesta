@@ -33,9 +33,7 @@ namespace Encuesta.Controllers
             return View();
         }
 
-        // mensaje que muestra la ruta que debe escribir en el buscador para poder acceder al formulario
-        string Ruta = "La ruta de la vista es: https://localhost:44307/Home/FormularioEncuesta";
-
+       
 
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
