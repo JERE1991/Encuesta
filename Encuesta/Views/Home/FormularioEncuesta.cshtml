@@ -349,43 +349,43 @@
                                 <h4 class="card-title">Formulario tipo Encuesta</h4>
                                 <p class="card-description"> @fecha</p>
 
-                                <form class="forms-sample">
+                                <form class="forms-sample"  asp-controller="Home"   asp-action="FormularioEncuesta">
                                     <div class="form-group">
                                         <label for="exampleInputName1">Primer Nombre</label>
-                                        <input type="text" class="form-control" id="exampleInputName1" placeholder="Primer Nombre">
+                                        <input type="text" class="form-control" id="exampleInputName1"name="primerNombre_usuario">
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputName1">Segundo Nombre</label>
-                                        <input type="text" class="form-control" id="exampleInputName1" placeholder="Segundo Nombre">
+                                        <input type="text" class="form-control" id="exampleInputName1" name="segundoNombre_usuario">
                                     </div>
 
                                     <div class="form-group">
                                         <label for="exampleInputName1">Primer Apellido</label>
-                                        <input type="text" class="form-control" id="exampleInputName1" placeholder="Primer Apellido">
+                                        <input type="text" class="form-control" id="exampleInputName1" name="primerApellido_usuario">
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputName1">Segundo Apellido</label>
-                                        <input type="text" class="form-control" id="exampleInputName1" placeholder="Segundo Apellido">
+                                        <input type="text" class="form-control" id="exampleInputName1" name="primerApellido_usuario">
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group row">
                                             <label class="col-sm-3 col-form-label">F.Nacimiento</label>
                                             <div class="col-sm-9">
-                                                <input class="form-control" placeholder="dd/mm/yyyy" />
+                                                <input class="form-control" name=" fechaNacimiento_usuario" />
                                             </div>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputName1">Edad</label>
-                                        <input type="text" class="form-control" id="exampleInputName1" placeholder="Edad">
+                                        <input type="text" class="form-control" id="exampleInputName1"name="edad_usuario">
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputEmail3">Email address</label>
-                                        <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Email">
+                                        <input type="email" class="form-control" id="exampleInputEmail3" name="correo_usuario">
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputName1">Pais</label>
-                                        <select class="form-control">
+                                        <select class="form-control" name="pais_usuario">
                                             <option>-------</option>
                                             <option>USA</option>
                                             <option>Italiana</option>
@@ -403,13 +403,13 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputCity1">City</label>
-                                        <input type="text" class="form-control" id="exampleInputCity1" placeholder="Location">
+                                        <input type="text" class="form-control" id="exampleInputCity1" name="location_usuario">
                                     </div>
                                     <div class="col-md-9">
                                         <div class="form-group row">
                                             <label>Sexo</label>
                                             <div class="col-sm-7">
-                                                <select class="form-control">
+                                                <select class="form-control" name="sexo_usuario ">
                                                     <option>------</option>
                                                     <option>Male</option>
                                                     <option>Female</option>
@@ -420,7 +420,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputName1">Tipo de Sangre</label>
-                                        <select class="form-control">
+                                        <select class="form-control" name="tipo_sangre">
                                             <option>-------</option>
                                             <option>A-</option>
                                             <option>A+</option>
@@ -434,7 +434,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputName1">Estado civil</label>
-                                        <select class="form-control">
+                                        <select class="form-control" name=" estadoCivil_usuario">
                                             <option>-------</option>
                                             <option>Casado/a</option>
                                             <option>Soltero/a</option>
@@ -443,11 +443,11 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputName1">Cantidad de Hijos</label>
-                                        <input type="text" class="form-control" id="exampleInputName1" placeholder="Cantidad de hijos">
+                                        <input type="text" class="form-control" id="exampleInputName1" name="cantidadHHijos_usuario">
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputName1">Nivel Academico</label>
-                                        <input type="text" class="form-control" id="exampleInputName1" placeholder="Nivel Acedemico">
+                                        <input type="text" class="form-control" id="exampleInputName1" name="nivelAcademico_usuario">
                                     </div>
                                     <div>
                                         <button type="submit" class="btn btn-success mr-2">Submit</button>

@@ -28,12 +28,15 @@ namespace Encuesta.Controllers
             return View();
         }
         
-        public ActionResult FormularioEncuesta()
+        public IActionResult FormularioEncuesta()
         {
             return View();
         }
-
-       
+        [HttpPost]
+       public IActionResult FormularioEncuesta(FormularioEncuesta formularioEncuesta)
+        {
+            return View();
+        }
 
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
