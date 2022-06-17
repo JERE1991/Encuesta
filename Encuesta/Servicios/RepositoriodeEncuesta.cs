@@ -6,6 +6,7 @@ using Dapper;
 using Encuesta.Models;
 using Microsoft.Data.SqlClient;
 using Microsoft.Extensions.Configuration;
+//using System.Data.SqlClient;
 
 namespace Encuesta.Servicios
 { 
@@ -21,7 +22,7 @@ namespace Encuesta.Servicios
        private readonly string connectionString;
         public RepositoriodeEncuesta(IConfiguration configuracion) {
 
-            connectionString = configuracion.GetConnectionString("DefaulConnection");
+            connectionString = configuracion.GetConnectionString("DefaultConnection");
 
         }
 
@@ -30,12 +31,8 @@ namespace Encuesta.Servicios
             using (var conexion = new SqlConnection(connectionString)) {
 
 
-                conexion.Query($@"insert into Encuesta " + "(primerNombre_usuario, segundoNombre_usuario, primerApellido_usuario" +
-                    "segundoApellido_usuario, fechaNacimiento_usuario, correo_usuario, pais_usuario, location_usuario, sexo_usuario, tipo_sangre" +
-                    "cantidadHHijos_usuario, estadoCivil_usuario, nivelAcademico_usuario, edad_usuario)" + "values" +
-                    "(@)primerNombre_usuario, @segundoNombre_usuario, @primerApellido_usuario, " +
-                    "@segundoApellido_usuario, @fechaNacimiento_usuario, @correo_usuario" +
-                    "@pais_usuario, @location_usuario, @sexo_usuario, @tipo_sangre, @cantidadHijos_usuario, @estadoCivil_usuario, @nivelAcademico_usuario, @edad) ");
+                conexion.Query($@"insert into FEncuesta " + "(primerNombre_usuario, segundoNombre_usuario, primerApellido_usuario,segundoApellido_usuario, fechaNacimiento_usuario, correo_usuario, pais_usuario, location_usuario, sexo_usuario, tipo_sangre,cantidadHijos_usuario, estadoCivil_usuario, nivelAcademico_usuario, edad_usuario)" + "values" +
+                    "(@primerNombre_usuario, @segundoNombre_usuario, @primerApellido_usuario, @segundoApellido_usuario, @fechaNacimiento_usuario, @correo_usuario, @pais_usuario, @location_usuario, @sexo_usuario, @tipo_sangre, @cantidadHijos_usuario, @estadoCivil_usuario, @nivelAcademico_usuario, @edad) ", formularioEncuesta);
 
 
 

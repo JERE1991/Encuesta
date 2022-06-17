@@ -1,4 +1,5 @@
 ﻿using Encuesta.Models;
+using Encuesta.Servicios;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -11,23 +12,26 @@ namespace Encuesta.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly IRepositoriodeEncuesta repositorioEncuesta;
 
-        public HomeController(ILogger<HomeController> logger)
+        public  HomeController(IRepositoriodeEncuesta repositorioEncuesta)
         {
-            _logger = logger;
+           this.repositorioEncuesta = repositorioEncuesta;
+
         }
 
+       
+        [HttpGet]
         public IActionResult Index()
         {
             return View();
         }
-
+        [HttpGet]
         public IActionResult Privacy()
         {
             return View();
         }
-        
+        [HttpGet]
         public IActionResult FormularioEncuesta()
         {
             return View();
@@ -35,6 +39,7 @@ namespace Encuesta.Controllers
         [HttpPost]
        public IActionResult FormularioEncuesta(FormularioEncuesta formularioEncuesta)
         {
+            repositorioEncuesta.FormularlaEncuesta(formularioEncuesta);
             return View();
         }
 

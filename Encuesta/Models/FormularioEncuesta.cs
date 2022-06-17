@@ -17,12 +17,12 @@ namespace Encuesta.Models
         public string location_usuario { get; set; }
         public string sexo_usuario { get; set;}
         public string tipo_sangre { get; set; }
-        public int cantidadHHijos_usuario { get; set; }
+        public int cantidadHijos_usuario { get; set; }
         public string estadoCivil_usuario { get; set; }
         public string nivelAcademico_usuario { get; set; }
-        public int   { get; set; }
+        public int  edad { get; set; }
 
 
-
+          
     }
 }
